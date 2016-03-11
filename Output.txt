@@ -1,0 +1,102 @@
+Problem 1: (0 union 1)* 0 (0 union 1)*
+
+Input: 1101
+
+Output:
+PresentState	TapeHead	TapeStatus
+q0		1		q0
+q0		1		q0
+q0		0		accept
+String Accepted
+
+
+Input: 11
+
+Output:
+PresentState	TapeHead	TapeStatus
+q0		1		q0
+q0		1		q0
+String rejected
+
+
+
+Problem 2: { w#w | w in {0,1}* }
+
+Input: 110#110$
+
+Output:
+PresentState	TapeHead	TapeStatus
+q1		x		q2
+q2		1		q2
+q2		0		q2
+q2		#		q4
+q4		x		q6
+q6		#		q7
+q7		0		q7
+q7		1		q7
+q7		x		q1
+q1		x		q3
+q3		0		q3
+q3		#		q5
+q5		x		q5
+q5		x		q6
+q6		x		q6
+q6		#		q7
+q7		0		q7
+q7		x		q1
+q1		x		q2
+q2		#		q4
+q4		x		q4
+q4		x		q4
+q4		x		q6
+q6		x		q6
+q6		x		q6
+q6		#		q7
+q7		x		q1
+q1		#		q8
+q8		x		q8
+q8		x		q8
+q8		x		q8
+String Accepted
+
+
+Input: 110#111$
+
+Output:
+PresentState	TapeHead	TapeStatus
+q1		x		q3
+q3		1		q3
+q3		0		q3
+q3		#		q5
+q5		x		q6
+q6		#		q7
+q7		0		q7
+q7		1		q7
+q7		x		q1
+q1		x		q3
+q3		0		q3
+q3		#		q5
+q5		x		q5
+q5		x		q6
+q6		x		q6
+q6		#		q7
+q7		0		q7
+q7		x		q1
+q1		x		q2
+q2		#		q4
+q4		x		q4
+q4		x		q4
+No match for state and input : q4 1
+String Rejected
+
+
+Input: 011#1$
+Output:
+PresentState	TapeHead	TapeStatus
+q1		x		q2
+q2		1		q2
+q2		1		q2
+q2		#		q4
+No match for state and input : q4 1
+String Rejected
+
